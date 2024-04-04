@@ -24,4 +24,4 @@ jobs:
       - name: package NuGet package
         run: dotnet pack Kopeechka\ Library/kopeechka.sln --configuration Release
       - name: push NuGet package
-        run: dotnet nuget push "bin/Release/*.nupkg" --source github --api-key ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget push "Kopeechka Library/kopeechka/bin/Release/*.nupkg" --source github --api-key ${{ secrets.GITHUB_TOKEN }}
