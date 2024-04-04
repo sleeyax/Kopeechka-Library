@@ -22,6 +22,6 @@ jobs:
       - name: Add GitHub NuGet source
         run: dotnet nuget add source --username Sleeyax --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/sleeyax/index.json"
       - name: package NuGet package
-        run: dotnet pack --configuration Release
+        run: dotnet pack Kopeechka\ Library/kopeechka.sln --configuration Release
       - name: push NuGet package
         run: dotnet nuget push "bin/Release/*.nupkg" --source github --api-key ${{ secrets.GITHUB_TOKEN }}
